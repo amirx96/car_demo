@@ -1,0 +1,29 @@
+{
+    "name": "prius-car",
+    "dockerFile": "Dockerfile",
+    "extensions": [
+        "ms-vscode.cpptools",
+        "ms-iot.vscode-ros"
+    ],
+    "runArgs": [
+        "--cap-add=SYS_PTRACE",
+        "--security-opt",
+        "seccomp=unconfined",
+        "-v",
+        "${env:HOME}${env:USERPROFILE}/.ssh:/root/.ssh",
+        "--runtime","nvidia",
+        "-e", "DISPLAY=${env:DISPLAY}",
+        "-e", "XAUTHORITY=$XAUTH",
+        "-e", "QT_X11_NO_MITSHM=1",
+        "-v", "/tmp/.X11-unix:/tmp/.X11-unix:rw",
+        //"--device", "/dev/input/js0",
+        // "--net", "host",
+        // "-e", "QT_GRAPHICSSYSTEM=native"
+    ],
+    "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash"
+    },
+    "workspaceMount": "src=${localWorkspaceFolder}/,dst=/prius_ws/src/,type=bind,consistency=cached",
+    "workspaceFolder": "/prius_ws",
+    "postCreateCommand": "bash /prius_ws/src/docker-setup.sh"
+}
