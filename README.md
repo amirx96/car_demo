@@ -6,7 +6,7 @@ This still requires you to be running Ubuntu 18/16 however, due to the restricti
 
 I have also added a Purepursuit example algortihm, which was based on on the Python Robotics library. 
 
-![Purepursuit Demo](https://i.imgur.com/LaWtrrD.mp4)
+![Purepursuit Demo](demo.gif)
 # Demo of Prius in ROS/GAZEBO
 
 This is a simulation of a Prius in [gazebo 9](http://gazebosim.org) with sensor data being published using [ROS kinetic](http://wiki.ros.org/kinetic/Installation)
