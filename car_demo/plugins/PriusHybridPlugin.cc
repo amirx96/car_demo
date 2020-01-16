@@ -542,7 +542,7 @@ void PriusHybridPlugin::Load(physics::ModelPtr _model, sdf::ElementPtr _sdf)
     this->dataPtr->maxSpeed = paramDefault;
 
   paramName = "max_steer";
-  paramDefault = 0.6;
+  paramDefault = 0.69;
   if (_sdf->HasElement(paramName))
     this->dataPtr->maxSteer = _sdf->Get<double>(paramName);
   else

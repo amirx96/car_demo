@@ -1,0 +1,7 @@
+<launch>
+
+  <node pkg="wp_control" type="loadWaypoints.py" name="loadWaypoints" output="screen">
+    <param name="WaypointFile" value="$(find wp_control)/paths/waypoints" />
+  </node>
+
+</launch>
